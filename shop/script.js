@@ -211,11 +211,9 @@ function filterByColor(data){
   let filteredData = [];
 
   if(!red && !blue && !green && !black && !white){
-    data.map((item) => {
-      filteredData.push(item);
-    })
 
-    return filteredData;
+    console.log(data);
+    return data;
   }
 
   data.map((item) =>{
@@ -248,11 +246,8 @@ function filterBySize(data){
   let filteredData = [];
 
   if(!s && !m && !l && !xl){
-    data.map((item) => {
-      filteredData.push(item);
-    })
-
-    return filteredData;
+    console.log(data);
+    return data;
   }
 
   data.map((item) =>{
@@ -325,6 +320,7 @@ function searchFilter(data){
   let searchBar = document.getElementById('serachFilter').value;
 
   if(searchBar == ""){
+    console.log(data);
     return data;
   }
 
