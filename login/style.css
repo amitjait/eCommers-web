@@ -1,0 +1,136 @@
+
+body{
+    margin: 0px auto;
+    overflow-x: hidden;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    }
+    
+    ul {
+    list-style: none;
+    }
+    
+    /*----------- header -----------*/
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+    }
+    
+    nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    }
+    
+    nav .nav-items a {
+    margin: 0 1rem;
+    }
+
+.menu{
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 30%;
+    position: relative;
+
+    left: 40%;
+}
+
+.menuItem{
+
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+li{ 
+    display: flex;
+    width: 25%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+
+/* sign in */
+
+.singInform{
+    margin-top: 2rem;;
+}
+
+.form{
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: 0px auto;
+}
+
+h2{
+    width: 90%;
+    margin: 0px auto;
+    height: 30px; 
+
+    /* border: 1px solid black; */
+}
+
+input{
+    width: 98%;
+    margin-top: 1.5rem;
+    height: 35px;
+    padding-left: 1rem;
+    font-size: 15px;
+}
+
+
+#SingInbtn{
+    width: 150px;
+    height: 40px;
+
+    background-color: black;
+    color: white;
+    font-size: large;
+
+    margin-top: 1rem;
+
+}
+
+#SingInbtn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+#SingInbtn:active{
+    width: 149px;
+    height: 39px;
+    font-size: 15px;
+}
+
+.alert{
+    width: fit-content;
+    margin: 0px auto;
+    color: red;
+    font-size: large;
+    font-weight: bold;
+}

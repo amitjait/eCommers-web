@@ -1,0 +1,277 @@
+/* Write styles here */
+
+body{
+    margin: 0px auto;
+    overflow-x: hidden;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    }
+    
+    ul {
+    list-style: none;
+    }
+    
+    /*----------- header -----------*/
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+    }
+    
+    nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    }
+    
+    nav .nav-items a {
+    margin: 0 1rem;
+    }
+
+.menu{
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 30%;
+    position: relative;
+
+    left: 40%;
+}
+
+.menuItem{
+
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+li{ 
+    display: flex;
+    width: 25%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+
+/* main section */
+
+.head{
+    display: flex;
+
+}
+
+
+.content{
+    width: 44%;
+    margin-left: 6%;
+}
+
+.mid-container{
+    height: 70vh;
+    display: flex;
+}
+
+.subMid{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    /* background-color: yellow; */
+}
+
+/* ------------button section */
+.btn-section{
+    margin: 0px auto;
+    display: flex;
+    width: 60%;
+
+    justify-content:space-around;
+    padding: 1rem;
+}
+
+.btn-section > .btn{
+    width: 40%;
+    height: 30px;
+    font-size:15px;
+}
+
+.btn-section > .btn:hover{
+    cursor: pointer;
+    font-size:17px;
+}
+
+.btn-section > .btn:active{
+    /* cursor: pointer; */
+    font-size:15px;
+}
+
+#login-home{
+    background-color: black;
+    color: white;
+}
+
+#signUp-home{
+    background-color: white;
+    color: black;
+}
+
+/* ----------sample product */
+
+
+.prodMain{
+    margin: 0px auto;
+    width: 50%; 
+    min-width: 200px;
+    max-height: 350px;
+}
+
+.sampleProd{
+    margin: 0px auto;
+    border: 1px solid black;
+    height: 100%;
+    padding: 2%;
+}
+
+.imag-container{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 280px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.prodImage{
+    margin: 0px auto;
+    width: 100%;
+    object-fit:scale-down;
+}
+
+.price-size{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+.color{
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#red{
+    background-color: red;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+
+    margin-left: 1rem;
+}
+
+#blue{
+    background-color: blue;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+
+    margin-left: 1rem;
+}
+
+#green{
+    background-color: green;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    margin-left: 1rem;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.stars{
+    margin-left: 1rem;
+    color: goldenrod;
+    font-size:x-large;
+}
+
+.atcBtn{
+    margin: 0px auto;
+    /* background-color: black; */
+    width: 100%;
+    /* display: flex; */
+    
+}
+
+#atc-home{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+
+    font-size: 20px;
+
+}
+
+#atc-home:hover{
+    cursor: pointer;
+}
+
+#atc-home:active{
+    font-size: 18px;
+}
+
+/* right side middle section  */
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 30px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.landImg{
+    flex-wrap: wrap;
+    width: 65%;
+}
+
+#img1{
+    width: 70%;
+}
+
+#img2{
+    width: 20%;
+}

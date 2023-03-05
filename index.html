@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MeShop.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- header -->
+    <nav>
+      <div class="brand">
+        <a href="/">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        <a href="/cart">My Cart</a>
+      </div>
+    </nav>
+    
+    <!-- main container -->
+
+    <div class="flex-container">
+        <div class="head">
+          <div class="content">
+            <h1>Degi-Shop.</h1>
+            <p class="slogan">Your First Shop built on HTML,CSS AND JavaScript</p>
+          </div>
+        </div>
+
+        <!-- middle container -->
+        <div class="mid-container">
+          
+          <!-- left section  -->
+          <div class="subMid">
+
+            <!-- buttons section -->
+            <div class="btn-section">
+              <button id="login-home" class="btn" onclick="loginPage()">Login</button>
+              <button id="signUp-home" class="btn" onclick="signUpPage()">SignUp</button>
+            </div>
+
+            <!-- sample product  -->
+            <div class="prodMain">
+              <div class="sampleProd ">
+                <div class="imag-container">
+                  <img src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg" alt="DeskTop" class="prodImage">
+                </div>
+                <div class="info">
+                  <div class="price-size">
+                    <span>Rs 599</span>
+                    <span>S, M, L</span>
+                  </div>
+                  <div class="color">
+                    <div>Colors :</div>
+                    <div id="red"></div>
+                    <div id="blue"></div>
+                    <div id="green"></div>
+  
+                  </div>
+                  <div class="rating">
+                    <div>Rating :</div>
+                    <div class="stars">
+                      ★ ★ ★
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="atcBtn">
+                <button id="atc-home">Add To Cart</button>
+              </div>
+            </div>            
+          </div>
+          <div class="landImg">
+            <img id="img1" src="landingPagePic.png" alt="">
+            <img id="img2" src="shop1.png" alt="" class="floating">
+          </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
