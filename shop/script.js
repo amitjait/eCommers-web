@@ -308,7 +308,7 @@ function filterByPrice(data){
     else if(range50 && (item.price >= 25 && item.price <= 100)){
       filteredData.push(item);
     }
-    else if(range100 && item.price < 100){
+    else if(range100 && item.price > 100){
       filteredData.push(item);
     }
   })
@@ -388,8 +388,3 @@ function main(){
 
 
 main();
-console.log(window.location.href, window.location.origin+"/shop", localStorage.getItem('isLogin') == true);
-if(window.location.href != window.location.origin+"/shop" && localStorage.getItem('isLogin') == true){
-  console.log("IN");
-  window.location.href = window.location.origin+"/shop";
-}
