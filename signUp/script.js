@@ -152,3 +152,8 @@ function ValidPassword(Password){
     }
    
 }
+
+if(window.location.href != window.location.origin+"/shop" && localStorage.getItem('isLogin') == "true"){
+    console.log("IN");
+    window.location.href = window.location.origin+"/shop";
+}
