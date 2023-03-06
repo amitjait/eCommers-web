@@ -71,11 +71,13 @@ function signUp(){
         alert.style.display = "block";
         return;
     }else{
+        let token = generateToken(16);
         let u = {
             "fName":fName,
             "sName":sName,
             "email":email,
             "pass":pwd,
+            "token":token,
         }
 
         let data = localStorage.getItem("data");
@@ -153,7 +155,20 @@ function ValidPassword(Password){
    
 }
 
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+function generateToken(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+
 if(window.location.href != window.location.origin+"/shop" && localStorage.getItem('isLogin') == "true"){
     console.log("IN");
     window.location.href = window.location.origin+"/shop";
 }
+
