@@ -53,7 +53,14 @@ function cartItems(){
     
 
     let cartItems = cartData();
-    console.log(cartData());
+
+    let message = document.getElementById('message');
+
+    if(cartItems.length == 0){
+        message.style.display = "block";
+    }else{
+        message.style.display ="none";
+    }
 
     let items = document.getElementById('items');
     cartItems.map((item) =>{

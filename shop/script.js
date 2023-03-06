@@ -165,7 +165,6 @@ function electronics(){
 function removeActive(){
   let filters = document.getElementsByClassName('filter');
   for(let i=0; i<5; i++){
-    // console.log(filters[i]);
     filters[i].classList.remove('active');
   }
 }
@@ -188,9 +187,6 @@ function sideFilters(data){
   let filteDataPrice = filterByPrice(filterDataRating);
   let filterDataSearch = searchFilter(filteDataPrice);
 
-  // menHtml(filterDataSearch);
-
-  // console.log("Search", filterDataSearch);
 
   return filterDataSearch;
 
