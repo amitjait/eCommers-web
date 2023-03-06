@@ -236,3 +236,19 @@ main-content .items .item .circle {
   margin: 0 5px;
   border: 1px solid black;
 }
+
+.added{
+  display: none;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  background-color: greenyellow;
+  cursor: pointer;
+
+  border: 1px solid black;
+}

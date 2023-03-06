@@ -135,6 +135,7 @@ function removeFromCart(e){
             cartItems.splice(i, 1);
             user.cart = cartItems;
             localStorage.setItem('user', JSON.stringify(user));
+            console.log(JSON.parse(localStorage.getItem('user')));
 
             window.location.href = window.location.href;
             return;

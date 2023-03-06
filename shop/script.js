@@ -105,7 +105,8 @@ function itemHtml(item){
             </div>
             <div class="row">Rating: ${item.rating.rate}</div>
           </div>
-          <button data-prod-id= ${item.id} id="${item.id}" >Add to Cart</button>
+          <button id="${item.id}" >Add to Cart</button>
+          <div class="added" id="b${item.id}">Go to Cart</div>
         </div>           
         `
 }
@@ -410,10 +411,14 @@ function cart(e){
   }
 
   let btn = document.getElementById(e.id);
-  btn.style.backgroundColor = "orange";
-  btn.innerHTML = "Go to Cart";
-  btn.addEventListener('click', ()=>{
-    window.location.href = "cart";
+  btn.remove();
+  let bId = "b"+e.id;
+  let goToCart = document.getElementById(bId);
+  goToCart.style.display = "block";
+
+  // btn.removeEventListener('click', cart);
+  goToCart.addEventListener('click', ()=>{
+    window.location.href = window.location.origin+"/cart";
   });
 
   localStorage.setItem('user', JSON.stringify(userData));
@@ -463,9 +468,8 @@ function addedTocart(){
     console.log(btn);
     btn.style.backgroundColor = "orange";
     btn.innerHTML = "Go to Cart";
-
+    // btn.removeEventListener('click', )
     btn.addEventListener('click', ()=>{
-      // console.log("clicked");
       window.location.href = window.location.origin+"/cart";
     });
   }
