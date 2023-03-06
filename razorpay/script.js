@@ -4,9 +4,13 @@
 // Add button code documentation:
 // https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button
 
+console.log(window.location.origin+"/cart");
 document.getElementById("rzp-button1").onclick = function (e) {
   let total = localStorage.getItem('total');
-  console.log(parseInt(total), total);
+  document.getElementById("rzp-button1").style.display = "none";
+  document.getElementById('goback').style.display = "block";
+  document.getElementById('content').innerHTML = "Go back";
+
   var options = {
     key: "rzp_test_wzFXFHKU56LGex", // Enter the Key ID generated from the Dashboard
     amount: parseInt(total) * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -14,7 +18,7 @@ document.getElementById("rzp-button1").onclick = function (e) {
     name: "MyShop Checkout",
     description: "This is your order", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     theme: {
-      color: "#000",
+      color: "#skyblue",
     },
     image:
       "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
@@ -40,4 +44,11 @@ document.getElementById("rzp-button1").onclick = function (e) {
   })
   
   e.preventDefault();
+
+
+  // window.location.href = window.location.origin+'/cart';
 };
+
+document.getElementById("goback").addEventListener('click', ()=>{
+  window.location.href = window.location.origin + '/cart';
+})
