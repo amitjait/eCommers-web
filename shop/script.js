@@ -455,7 +455,6 @@ function addedTocart(){
 
 
   if((typeof user.cart) == "undefined"){
-    console.log("in");
     return;    
   }
 
