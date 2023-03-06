@@ -62,12 +62,13 @@ function cartItems(){
     })
 }
 
+let total = 0;
 function billItem(){
     let list = document.getElementById('list');
 
     let cartItems = cartData();
 
-    let total = 0;
+    total = 0;
     cartItems.map((item, i)=>{
         list.innerHTML += billingHtml(item, i);
         total += (Number)(item.price);
@@ -77,6 +78,14 @@ function billItem(){
    
     t.innerHTML = "$"+total.toFixed(2);
     console.log(total.toFixed(2));
+    total = total.toFixed(2);
+    
+}
+
+function checkout(){
+    if(total != 0){
+        window.location.href = window.location.origin + "/razorpay";
+    }
 }
 
 function cartData(){
