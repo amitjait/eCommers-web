@@ -91,6 +91,7 @@ function billItem(){
 
 function checkout(){
     if(total != 0){
+        localStorage.setItem('total', total);
         window.location.href = window.location.origin + "/razorpay";
     }
 }
