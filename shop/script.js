@@ -464,12 +464,14 @@ function addedTocart(){
   }
 
   for(let i=0; i<cart.length; i++){
+    
     let btn = document.getElementById(cart[i]);
-    console.log(btn);
-    btn.style.backgroundColor = "orange";
-    btn.innerHTML = "Go to Cart";
-    // btn.removeEventListener('click', )
-    btn.addEventListener('click', ()=>{
+    btn.remove();
+    let bId = "b"+cart[i];
+    let goToCart = document.getElementById(bId);
+    goToCart.style.display = "block";
+  
+    goToCart.addEventListener('click', ()=>{
       window.location.href = window.location.origin+"/cart";
     });
   }
