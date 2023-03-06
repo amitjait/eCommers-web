@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <nav>
+      <div class="brand">
+        <a href="/">Shopping Cart</a>
+      </div>
+      <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="/profile">My Profile</a>
+      </div>
+    </nav>
+
+    <main>
+      <h2>My Cart</h2>
+      <section>
+        <div class="items" id="items">
+
+        </div>
+        <div class="bill-section">
+          <div class="heading">
+            Checkout List
+          </div>
+          <div class="list" id="list">
+            <!-- <div class="checkout-items">
+              <div class="item-title">
+                1. Shirt
+              </div>
+              <div class="item-price">
+                $599
+              </div>
+            </div>             -->
+          </div>
+          <div class="line"></div>
+          <div class="total">
+            <div class="head">
+              Total 
+            </div>
+            <div id="tPrice">
+
+            </div>
+          </div>
+          <div class="line"></div>
+
+          <button id="checkout">Checkout</button>
+        </div>
+        
+      </section>
+
+      
+    </main>
+
+    <script src="script.js"></script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   </body>
 </html>

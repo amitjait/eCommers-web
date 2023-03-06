@@ -1,11 +1,3 @@
-// Write your script here
-
-function changePass(){
-    let allData = JSON.parse(localStorage.getItem('data'));
-    
-    
-}
-
 
 function profile(){
 

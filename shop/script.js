@@ -82,7 +82,6 @@ async function shop(){
    console.log(data);
 }
 
-shop();
 
 function itemHtml(item){
   return `
@@ -106,7 +105,7 @@ function itemHtml(item){
             </div>
             <div class="row">Rating: ${item.rating.rate}</div>
           </div>
-          <button id="addBtn">Add to Cart</button>
+          <button data-prod-id= ${item.id} id="${item.id}" >Add to Cart</button>
         </div>           
         `
 }
@@ -212,7 +211,7 @@ function filterByColor(data){
 
   if(!red && !blue && !green && !black && !white){
 
-    console.log(data);
+    // console.log(data);
     return data;
   }
 
@@ -246,7 +245,7 @@ function filterBySize(data){
   let filteredData = [];
 
   if(!s && !m && !l && !xl){
-    console.log(data);
+    // console.log(data);
     return data;
   }
 
@@ -270,7 +269,7 @@ function filterBySize(data){
 
 function filterByRating(data){
   let rating = document.getElementById('range').value;
-  console.log(rating);
+  // console.log(rating);
 
   let filteredData = data.filter((item) => {
     return (item.rating.rate >= rating);
@@ -320,7 +319,7 @@ function searchFilter(data){
   let searchBar = document.getElementById('serachFilter').value;
 
   if(searchBar == ""){
-    console.log(data);
+    // console.log(data);
     return data;
   }
 
@@ -384,6 +383,95 @@ function main(){
   womenHtml();
   jewelleryHtml();
   electronicsHtml();
+
+  addedTocart();
+  
+  addToCart(); 
+}
+
+
+function cart(e){
+  e = e || window.event;
+  e = e.target || e.srcElement;
+    
+  let userData = JSON.parse(localStorage.getItem('user'));
+
+
+  if((typeof userData.cart) == "undefined"){
+    let cart = [];
+    cart.push(e.id);
+    userData.cart = cart;
+    
+  }else{
+    cart = userData.cart;
+    cart.push(e.id);
+
+    userData.cart = cart;
+  }
+
+  let btn = document.getElementById(e.id);
+  btn.style.backgroundColor = "orange";
+  btn.innerHTML = "Go to Cart";
+  btn.addEventListener('click', ()=>{
+    window.location.href = "cart";
+  });
+
+  localStorage.setItem('user', JSON.stringify(userData));
+  console.log(JSON.parse(localStorage.getItem('user')).cart);
+
+  let users = JSON.parse(localStorage.getItem('data'));
+
+  for(let i=0; i<users.length; i++){
+    if(userData.email == users[i].email){
+      users[i].cart = userData.cart;
+      console.log(users[i].cart);
+
+      localStorage.setItem('data', JSON.stringify(users));
+      return;
+    }
+  }
+
+}
+
+function addToCart(){
+  let addToCart = document.getElementsByTagName('button');
+  console.log(addToCart, typeof addToCart);
+
+  for(let i in addToCart){
+    try{
+      addToCart[i].addEventListener('click', cart);
+    }catch(e){
+      console.log("Error", e);
+    }
+  } 
+}
+
+function addedTocart(){
+
+  let user = JSON.parse(localStorage.getItem("user"));
+  let cart = user.cart;
+
+  console.log(cart);
+
+
+  if((typeof user.cart) == "undefined"){
+    console.log("in");
+    return;    
+  }
+
+  for(let i=0; i<cart.length; i++){
+    let btn = document.getElementById(cart[i]);
+    console.log(btn);
+    btn.style.backgroundColor = "orange";
+    btn.innerHTML = "Go to Cart";
+
+    btn.addEventListener('click', ()=>{
+      // console.log("clicked");
+      window.location.href = window.location.origin+"/cart";
+    });
+  }
+
+  console.log("Inside");
 }
 
 
