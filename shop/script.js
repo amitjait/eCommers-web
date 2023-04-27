@@ -1,4 +1,6 @@
 
+console.log("Inside Shop")
+
 var colors = ["red", "blue", "green", "black", "white"];
 var sizes = ["S", "M", "L", "XL"];
 
@@ -82,6 +84,8 @@ async function shop(){
     localStorage.setItem('electronics', JSON.stringify(electronicsItem));
    console.log(data);
 }
+
+// shop();
 
 
 function itemHtml(item){
@@ -377,6 +381,7 @@ function electronicsHtml(){
 }
 
 function main(){
+  shop();
   menHtml();
   womenHtml();
   jewelleryHtml();
@@ -478,3 +483,5 @@ function addedTocart(){
 
 
 main();
+
+console.log(localStorage);
